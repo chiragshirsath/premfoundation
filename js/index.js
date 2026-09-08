@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const imageConfig = {
         folder: 'images/journey',
         extensions: ['jpeg', 'jpg', 'png'],
-        count: 272,
+        count: 305,
         prefix: '',
         startIndex: 1
     };
@@ -119,7 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const videoConfig = {
         folder: 'videos/journey',
         extensions: ['mp4', 'mov'],
-        count: 13,
+        count: 16,
         prefix: '',
         startIndex: 1
     };
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const mediaItem = {
                 type: type,
                 path: mediaPath,
-                caption: `${type === 'photos' ? 'Photo' : 'Video'} ${i} - ${type === 'photos' ? 'Gallery' : 'Event Coverage'} `,
+                caption: (type === 'photos' && i >= 273) ? `Organic Farming & NARI Company Membership Meeting - Photo ${i}` : `${type === 'photos' ? 'Photo' : 'Video'} ${i} - ${type === 'photos' ? 'Gallery' : 'Event Coverage'} `,
                 index: i - config.startIndex
             };
             currentMediaItems.push(mediaItem);
